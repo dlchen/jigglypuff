@@ -1,0 +1,11 @@
+{
+  "name": "robo-jiggly",
+  "version": "0.1.0",
+  "description": "Keep awake with RobotJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dlchen",
+  "license": "ISC"
+}
