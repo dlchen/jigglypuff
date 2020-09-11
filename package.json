@@ -1,7 +1,7 @@
 {
   "name": "robo-jiggly",
   "version": "0.1.0",
-  "description": "Keep awake with RobotJS",
+  "description": "Stay awake by mouse movement",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
