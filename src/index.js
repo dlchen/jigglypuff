@@ -2,7 +2,7 @@ const robot = require('robotjs');
 
 const TIMEOUT_CONSTANT = 600000;
 const MILLISECOND = 1000;
-const MOVE_AMOUNT_BY_PIXELS = 1;
+const PIXEL_MOVE_AMOUNT = 1;
 
 console.log(
   `starting robo-jiggly with jiggle interval from ` +
@@ -13,8 +13,8 @@ const jiggle = (toggle) => {
   console.log('next jiggle in seconds', timeoutTime / MILLISECOND);
   setTimeout(() => {
     let { x, y } = robot.getMousePos();
-    x += (toggle ? MOVE_AMOUNT_BY_PIXELS : -MOVE_AMOUNT_BY_PIXELS);
-    y += (toggle ? MOVE_AMOUNT_BY_PIXELS : -MOVE_AMOUNT_BY_PIXELS);
+    x += (toggle ? PIXEL_MOVE_AMOUNT : -PIXEL_MOVE_AMOUNT);
+    y += (toggle ? PIXEL_MOVE_AMOUNT : -PIXEL_MOVE_AMOUNT);
     robot.moveMouse(x, y);
     jiggle(!toggle);
   }, timeoutTime);
