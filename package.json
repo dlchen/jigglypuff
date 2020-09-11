@@ -1,5 +1,5 @@
 {
-  "name": "robo-jiggly",
+  "name": "@dlchen/robo-jiggly",
   "version": "0.1.0",
   "description": "Stay awake by mouse movement",
   "main": "index.js",
