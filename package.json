@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Stay awake by mouse movement",
   "main": "index.js",
+  "repository": "github:dlchen/robo-jiggly",
   "scripts": {
     "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
