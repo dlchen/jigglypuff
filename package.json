@@ -1,9 +1,9 @@
 {
-  "name": "@dlchen/robo-jiggly",
+  "name": "@dlchen/jigglypuff",
   "version": "0.2.0",
   "description": "Stay awake by mouse movement",
   "main": "index.js",
-  "repository": "github:dlchen/robo-jiggly",
+  "repository": "github:dlchen/jigglypuff",
   "scripts": {
     "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
