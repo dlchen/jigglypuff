@@ -5,19 +5,19 @@
  * Does not handle case when mouse is at the edge of the screen.
  */
 
-const robot = require('robotjs');
+import robot from 'robotjs';
 
-const { logger } = require('./utils')
+import { logger } from './utils';
 
 const TIMEOUT_CONSTANT = 600000 / 2;
 const MILLISECOND = 1000;
 const PIXEL_MOVE_AMOUNT = 1;
 
 logger(
-  `starting robo-jiggly with jiggle interval from ` +
+  `starting jigglypuff with jiggle interval from ` +
   `${TIMEOUT_CONSTANT / (MILLISECOND * 10)} to ${TIMEOUT_CONSTANT / MILLISECOND} seconds`);
 
-const jiggle = (toggle) => {
+const jiggle = (toggle: boolean = false) => {
   const timeoutTime = Math.floor(Math.random() * TIMEOUT_CONSTANT);
   logger('next jiggle in seconds', timeoutTime / MILLISECOND);
   setTimeout(() => {

@@ -5,12 +5,17 @@
   "main": "index.js",
   "repository": "github:dlchen/jigglypuff",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node ./dist/index.js",
+    "build-watch": "tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "dlchen",
   "license": "ISC",
   "dependencies": {
     "robotjs": "^0.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "typescript": "^5.1.3"
   }
 }
