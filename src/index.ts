@@ -5,28 +5,29 @@
  * Does not handle case when mouse is at the edge of the screen.
  */
 
-import robot from 'robotjs';
+import { mouse, Point } from '@nut-tree/nut-js'
 
 import { logger } from './utils';
 
 const TIMEOUT_CONSTANT = 600000 / 2;
+// const TIMEOUT_CONSTANT = 1000; // for local testing
 const MILLISECOND = 1000;
 const PIXEL_MOVE_AMOUNT = 1;
 
 logger(
-  `starting jigglypuff with jiggle interval from ` +
+  `starting jigglypuff with jiggly interval from ` +
   `${TIMEOUT_CONSTANT / (MILLISECOND * 10)} to ${TIMEOUT_CONSTANT / MILLISECOND} seconds`);
 
-const jiggle = (toggle: boolean = false) => {
+const jiggly = (toggle: boolean = false) => {
   const timeoutTime = Math.floor(Math.random() * TIMEOUT_CONSTANT);
-  logger('next jiggle in seconds', timeoutTime / MILLISECOND);
-  setTimeout(() => {
-    let { x, y } = robot.getMousePos();
+  logger('next jiggly in seconds', timeoutTime / MILLISECOND);
+  setTimeout(async () => {
+    let { x, y } = await mouse.getPosition()
     x += (toggle ? PIXEL_MOVE_AMOUNT : -PIXEL_MOVE_AMOUNT);
     y += (toggle ? PIXEL_MOVE_AMOUNT : -PIXEL_MOVE_AMOUNT);
-    robot.moveMouse(x, y);
-    jiggle(!toggle);
+    await mouse.move([new Point(x, y)])
+    jiggly(!toggle);
   }, timeoutTime);
 };
 
-jiggle();
+jiggly();

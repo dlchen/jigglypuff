@@ -12,7 +12,7 @@
   "author": "dlchen",
   "license": "ISC",
   "dependencies": {
-    "robotjs": "^0.6.0"
+    "@nut-tree/nut-js": "^3.1.2"
   },
   "devDependencies": {
     "@types/node": "^20.3.1",
